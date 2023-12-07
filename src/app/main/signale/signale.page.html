@@ -1,0 +1,38 @@
+<ion-header [translucent]="true"  collapse="fade" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title>SIGNALEMENT</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form action="">
+
+    <ion-list>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (click)="redirectToPage('besoin')">
+        <label class="btn btn-outline-warning" for="flexRadioDefault1">
+          <img src="/assets/img/incident-removebg-preview.png" alt="" style="margin-top: auto; margin-bottom: auto; width: 45px;"/>
+          <span> Signalé(e) des besoins </span>
+        </label>
+      </div>
+  
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" (click)="redirectToPage('incident')">
+        <label class="btn btn-outline-warning" for="flexRadioDefault2">
+          <img src="/assets/img/incident-removebg-preview.png" alt="" style="margin-top: auto; margin-bottom: auto; width: 45px;"/>
+          <span> Signalé(e) un incident</span>
+        </label>
+      </div>
+    </ion-list>
+    
+  </form>
+</ion-content>

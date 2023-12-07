@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title>RAPPORT</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+    <ion-list>
+      <ion-item lines="none">
+          <textarea class="form-control" placeholder="Rapport" id="floatingTextarea"></textarea>
+          <p><ion-icon name="mic-outline" ></ion-icon></p>
+      </ion-item>
+      <ion-button color="success">Envoyer</ion-button>
+    </ion-list>
+  </form>
+</ion-content>

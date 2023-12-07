@@ -1,0 +1,42 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)="onBack()" routerLink="/user/home">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+      
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title>INCIDENT</ion-title>
+  
+</ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  <form action="">
+    <ion-list>
+      <ion-item lines="none">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>braquage</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>oh feux</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>non respect du droit</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-label>agent blessé(e)s</ion-label>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
+
+
+<ion-toolbar>
+  <ion-button class="book-ticket" shape="round" expand="block">
+    ENVOYER
+  </ion-button>
+
+</ion-toolbar>

@@ -1,0 +1,15 @@
+ion-list{
+    height: 30vh;
+    box-shadow: 0px 0px 12px var(--box-color);
+    --box-color: #0c1932;
+    margin: 30px;
+    position: relative;
+    top: 12em;
+    ion-label{
+        text-transform: uppercase;
+    }
+}
+
+ion-button{
+    --border-radius: unset;
+}

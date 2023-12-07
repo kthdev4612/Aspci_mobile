@@ -1,0 +1,113 @@
+ion-toolbar{
+    text-align: center;
+}
+ion-content{
+    .menu{
+
+       ion-row{
+        margin-top: 30px;
+        margin-bottom: 22px;
+        margin-left: 4px;
+        margin-right: 4px;
+        ion-card{
+            text-align: center;
+            box-shadow: 0px 0px 10px var(--box-color);
+            --box-color: #6a6b6d;
+            img{
+                height: 15vh;
+                width: 104%;
+            }
+            ion-card-title{
+                color: #fff;
+                font-family: cursive;
+            }
+        }
+        .debut{
+            height: 16vh;
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(214,151,11,1) 35%, rgba(0,212,255,1) 100%);
+            border-radius: 20px;
+            img{
+                position: relative;
+                width: 68%;
+                height: 19vh;
+                top: -15px;
+            }
+            ion-label{
+                position: relative;
+                color: #fff;
+                top: 67px;
+                font-size: 34px;
+                font-family: cursive;
+                left: 64px;
+            }
+        }
+        .rapport{
+            height: 16vh;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 20px;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgba(67,46,104,1) 46%, rgba(76,53,113,1) 67%, rgba(0,212,255,1) 87%);
+            img{
+                position: relative;
+                width: 40%;
+                height: 15vh;
+                top: 1px;
+            }
+            ion-label{
+                position: relative;
+                color: #fff;
+                top: 67px;
+                font-size: 34px;
+                font-family: cursive;
+                left: 64px;
+            }
+        }
+        .signale{
+            height: 16vh;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 20px;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 9%, rgba(181,32,75,1) 49%, rgba(76,53,113,1) 82%);
+
+            img{
+                position: relative;
+                width: 40%;
+                height: 15vh;
+                top: 1px;
+            }
+            ion-label{
+                position: relative;
+                color: #fff;
+                top: 67px;
+                font-size: 34px;
+                font-family: cursive;
+                left: 64px;
+            }
+        }
+        .programme{
+            height: 16vh;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 20px;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(181,32,75,1) 12%, rgba(53,106,113,1) 52%);
+
+            img{
+                position: relative;
+                width: 40%;
+                height: 15vh;
+                top: 1px;
+            }
+            ion-label{
+                position: relative;
+                color: #fff;
+                top: 67px;
+                font-size: 34px;
+                font-family: cursive;
+                left: 27px;
+            }
+        }
+       }
+    }
+}

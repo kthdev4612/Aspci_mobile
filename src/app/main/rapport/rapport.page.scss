@@ -1,0 +1,32 @@
+ion-list{
+    position: relative;
+    top: 38em;
+    ion-item{
+        textarea{
+            background-color: #fff;
+            width: 88%;
+            border-radius: 18px;
+            padding: 10px;
+            
+        }
+        textarea::placeholder{
+            color: #888;
+            font-family: cursive;
+        }
+        p{
+            margin-left: 4px;
+            background-color: #356a71;
+            padding: 12px;
+            border-radius: 50%;
+        }
+        ion-icon{
+            font-size: 25px;
+            color: #fff;
+        }
+    }
+
+    ion-button{
+        position: relative;
+        left: 135px;
+    }
+}

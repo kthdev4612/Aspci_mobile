@@ -1,0 +1,27 @@
+ion-list{
+    position: relative;
+    top: 16em;
+    left: 15px;
+    width: 91%;
+
+    div{
+        // margin-bottom: 57px;
+        width: 77%;
+        text-align: center;
+        padding: 25px;
+        margin-left: 38px;
+        input[type=radio]{
+            visibility: hidden;
+          }
+          label{
+            padding: 22px;
+              img{
+                width: 50px;
+                margin-top: 10px;
+              }
+              span{
+                color: #424242;
+              }
+          }
+    }
+}
