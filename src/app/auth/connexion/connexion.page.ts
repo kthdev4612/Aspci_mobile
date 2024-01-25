@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
+declare var $:any;
+
 
 @Component({
   selector: 'app-connexion',
@@ -9,23 +12,40 @@ import { Router } from '@angular/router';
 })
 export class ConnexionPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: ApiService) { }
 
-  login_form: FormGroup = new FormGroup({
-    nom_complet: new FormControl(null, Validators.required),
-    matricul_agent: new FormControl(null, Validators.required),
-    mot_de_passe: new FormControl(null, Validators.required),
-  })
+
+  data:any
 
   ngOnInit() {
+    console.log(this.data);
+
   }
 
-  login(){
-  
-    console.log(this.login_form.value);
-    
-    this.router.navigate(['/main/accueil'])
-    
+  login_form: FormGroup = new FormGroup({
+    username: new FormControl(null, Validators.required),
+    matricule: new FormControl(null, Validators.required),
+    password: new FormControl(null, Validators.required),
+  })
+
+
+  LoginUser(){
+
+    this.http.loginUser(this.login_form.value).subscribe({
+      next: (res:any)=>{
+        this.data= res?.result;
+        console.log(this.data);
+
+        // $.cookie('isLoggedIn', true, { expires: 1 ,path: ''});
+        // $.notify("Access granted", "success");
+        sessionStorage.setItem('infoLogin',JSON.stringify(this.data));
+        if (res?.status === "success") {
+          this.router.navigate(['/main','accueil'])
+
+        }
+      }
+    })
+
   }
 
 }

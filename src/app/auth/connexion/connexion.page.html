@@ -8,28 +8,28 @@
   <div class="login-container">
     <ion-img src="/assets/img/Aspci12.jpg" alt="Logo" class="logo"></ion-img>
     <h1 class="title">Bienvenue!</h1>
-   <form [formGroup]="login_form" (submit)="login()">
+   <form [formGroup]="login_form" (submit)="LoginUser()">
     <ion-list>
       <ion-item>
           <ion-icon name="person-outline" slot="start"></ion-icon>
           <ion-label position="floating">Nom complet de l'agent</ion-label>
-          <ion-input formControlName="nom_complet" type="text"></ion-input>
+          <ion-input formControlName="username" type="text"></ion-input>
       </ion-item>
       <ion-item>
         <ion-icon name="barcode-outline" slot="start"></ion-icon>
         <ion-label position="floating">Matricule de l'agent</ion-label>
-        <ion-input formControlName="matricul_agent" type="text"></ion-input>
+        <ion-input formControlName="matricule" type="text"></ion-input>
       </ion-item>
       <ion-item>
         <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
         <ion-label position="floating">Mot de passe</ion-label>
-        <ion-input formControlName="mot_de_passe" type="password"></ion-input>
+        <ion-input formControlName="password" type="password"></ion-input>
       </ion-item>
     </ion-list>
     <ion-button expand="full" type="submit" [disabled]="!login_form.valid" class="login-button-new">Se Connecter</ion-button>
    </form>
 
-    
+
     <!-- <div class="register-link">
       <a routerLink="/auth/register">S'enregistrer</a>
     </div>

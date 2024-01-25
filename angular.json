@@ -112,7 +112,10 @@
               }
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.js",
+              "src/assets/js/jquery.cookie.js"
+            ]
           },
           "configurations": {
             "ci": {
@@ -136,7 +139,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": "12348515-d098-4914-a4ad-c721bb057392"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

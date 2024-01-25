@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
-  }
+  },
+  {
+    path: 'scanne',
+    loadChildren: () => import('./scanne/scanne.module').then( m => m.ScannePageModule)
+  },
 ];
 
 @NgModule({

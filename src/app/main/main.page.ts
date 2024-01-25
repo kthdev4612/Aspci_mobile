@@ -14,13 +14,19 @@ export class MainPage implements OnInit {
 
   constructor(private _router: Router) { }
 
+
+
+   //@ts-ignore
+   userInfo:any = JSON.parse(sessionStorage.getItem('infoLogin'))
+   is_user_logged_in = !!sessionStorage.getItem('infoLogin')
+
   public appPages = [
-    { title: 'Home', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Scanne', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Accueil', url: '/main/accueil', icon: 'paper-plane' },
+    { title: 'Scanne', url: '/main/pointage', icon: 'heart' },
+    { title: 'Profil', url: '/main/profile', icon: 'warning' },
   ];
   public labels = ['Partagé l\ application'];
-  
+
     // Create a Subject to manage the observable's lifecycle
     closed$ = new Subject<any>();
 
@@ -40,12 +46,19 @@ export class MainPage implements OnInit {
             // @ts-ignore
           event['url'].indexOf('/main/besoins') != -1 ||
             // @ts-ignore
-          event['url'].indexOf('/main/incidents') != -1 
+          event['url'].indexOf('/main/incidents') != -1
         ) {
           this.showTabs = false;
         } else {
           this.showTabs = true;
         }
       });
+  }
+
+
+  logout(){
+    // $.removeCookie('isLoggedIn', { path: '/' });
+    sessionStorage.removeItem('infoLogin')
+    window.location.href = '/'
   }
 }

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Formulaire</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="wrapper">
+    <div class="logo">
+        <img src="/assets/img/Aspci12.jpg" alt="">
+    </div>
+    <!-- <div class="text-center mt-4 name">
+        Aspci
+    </div> -->
+    <form class="p-3 mt-3" [formGroup]="validate_form">
+
+      <div class="left">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Entrez votre matricule</label>
+          <input formControlName="matricule" type="email" class="form-control">
+        </div>
+      </div>
+
+        <!-- <button class="btn mt-3" type="submit">VALIDER</button> -->
+    </form>
+  </div>
+
+
+</ion-content>
+
+<ion-toolbar lines="none">
+  <ion-button expand="full" type="submit" [disabled]="!validate_form.valid" (click)="verify()" class="book-ticket">VALIDER</ion-button>
+
+</ion-toolbar>
