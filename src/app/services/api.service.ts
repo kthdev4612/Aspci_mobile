@@ -22,5 +22,18 @@ export class ApiService {
     return this.api.post("http://127.0.0.1:5000/api/arrive/CreateArrive", body, httpOptions)
   }
 
+  CreateReport2(body:any){
+    const httpOptions = {
+      headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      })
+    };
+    return this.api.post("http://127.0.0.1:5000/api/report/CreateReport", body, httpOptions)
+  }
+
+  getAllReport(){
+
+    return this.api.get("http://127.0.0.1:5000/api/report/GetAllReport")
+  }
 
 }

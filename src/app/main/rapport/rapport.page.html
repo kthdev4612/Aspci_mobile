@@ -14,13 +14,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <form>
+  <form [formGroup]="report_form" (submit)="report()">
     <ion-list>
       <ion-item lines="none">
-          <textarea class="form-control" placeholder="Rapport" id="floatingTextarea"></textarea>
+          <textarea formControlName="coment" class="form-control" placeholder="Rapport" id="floatingTextarea"></textarea>
           <p><ion-icon name="mic-outline" ></ion-icon></p>
       </ion-item>
-      <ion-button color="success">Envoyer</ion-button>
+      <ion-button color="success" type="submit">Envoyer</ion-button>
     </ion-list>
   </form>
 </ion-content>

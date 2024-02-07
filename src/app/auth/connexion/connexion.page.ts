@@ -16,9 +16,9 @@ export class ConnexionPage implements OnInit {
 
 
   data:any
+  erreur:any
 
   ngOnInit() {
-    console.log(this.data);
 
   }
 
@@ -43,6 +43,10 @@ export class ConnexionPage implements OnInit {
           this.router.navigate(['/main','accueil'])
 
         }
+      },
+      error: (err:any)=>{
+        this.erreur = err?.error_description
+        console.log(this.erreur);
       }
     })
 
