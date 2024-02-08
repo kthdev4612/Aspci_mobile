@@ -17,11 +17,16 @@ export class RapportPage implements OnInit {
 
   data:any
   report_form: FormGroup = new FormGroup({
-    coment: new FormControl(null, Validators.required)
+    coment: new FormControl(null, Validators.required),
+    user_id: new FormControl(null, Validators.required),
+    user_matricule: new FormControl(null, Validators.required),
+    user_uid: new FormControl(null, Validators.required)
   })
   ngOnInit() {
     console.log(this.userInfo);
-
+    this.report_form.get('user_id')?.setValue(this.userInfo?.id);
+    this.report_form.get('user_matricule')?.setValue(this.userInfo?.matricule);
+    this.report_form.get('user_uid')?.setValue(this.userInfo?.uid);
   }
 
   report(){
