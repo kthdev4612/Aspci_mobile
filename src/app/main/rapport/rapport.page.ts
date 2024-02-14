@@ -33,7 +33,7 @@ export class RapportPage implements OnInit {
     this.http.CreateReport2(this.report_form.value).subscribe({
       next: (r:any)=>{
         this.data = r
-        console.log(this.data);
+        console.log(this.report_form.value);
 
       }
     })
