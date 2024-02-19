@@ -18,20 +18,23 @@ export class ScannFormPage implements OnInit {
 
   ngOnInit() {
     console.log(this.userInfo);
-
+    this.validate_form.get('p_firstname')?.setValue(this.userInfo?.firstname)
+    this.validate_form.get('p_lastname')?.setValue(this.userInfo?.lastname)
   }
 
   validate_form: FormGroup = new FormGroup({
-    matricule : new FormControl(null, Validators.required)
+    p_matricule : new FormControl(null, Validators.required),
+    p_firstname : new FormControl(null, Validators.required),
+    p_lastname : new FormControl(null, Validators.required)
   })
 
 
 
   verify(){
-    if (this.validate_form.get('matricule')?.value == this.userInfo?.matricule) {
-      this.http.CreateReport(this.validate_form.value).subscribe({
+    if (this.validate_form.get('p_matricule')?.value == this.userInfo?.matricule) {
+      this.http.CreatePresence(this.validate_form.value).subscribe({
         next: (res:any) =>{
-          if (res?.satus === "success") {
+          if (res?.status === "success") {
             this.router.navigate(["/main"])
           }
         }

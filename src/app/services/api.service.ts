@@ -13,13 +13,13 @@ export class ApiService {
    }
 
 
-   CreateReport(body:any){
+   CreatePresence(body:any){
     const httpOptions = {
       headers: new HttpHeaders({
       'Content-Type': 'application/json',
       })
     };
-    return this.api.post("http://127.0.0.1:5000/api/arrive/CreateArrive", body, httpOptions)
+    return this.api.post("http://127.0.0.1:5000/api/presence/CreatePresence", body, httpOptions)
   }
 
   CreateReport2(body:any){
