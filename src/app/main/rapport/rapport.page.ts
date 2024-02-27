@@ -19,6 +19,7 @@ export class RapportPage implements OnInit {
   report_form: FormGroup = new FormGroup({
     coment: new FormControl(null, Validators.required),
     user_id: new FormControl(null, Validators.required),
+    admin_id: new FormControl(null, Validators.required),
     user_matricule: new FormControl(null, Validators.required),
     user_uid: new FormControl(null, Validators.required)
   })
@@ -27,13 +28,18 @@ export class RapportPage implements OnInit {
     this.report_form.get('user_id')?.setValue(this.userInfo?.id);
     this.report_form.get('user_matricule')?.setValue(this.userInfo?.matricule);
     this.report_form.get('user_uid')?.setValue(this.userInfo?.uid);
+    this.report_form.get('admin_id')?.setValue(this.userInfo?.admin_id);
   }
 
   report(){
+    // console.log(this.report_form.value);
+
     this.http.CreateReport2(this.report_form.value).subscribe({
       next: (r:any)=>{
         this.data = r
-        console.log(this.report_form.value);
+        // console.log(this.report_form.value);
+        console.log(this.data);
+        
 
       }
     })
