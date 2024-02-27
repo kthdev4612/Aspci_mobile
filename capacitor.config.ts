@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.exemple.aspci',
-  appName: 'Aspci',
+  appId: 'io.ionic.starter',
+  appName: 'aspci_mobile',
   webDir: 'www',
   server: {
     androidScheme: 'https'
@@ -19,5 +19,6 @@ const config: CapacitorConfig = {
     }
   }
 };
+
 
 export default config;

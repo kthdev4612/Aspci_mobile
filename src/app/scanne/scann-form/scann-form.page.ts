@@ -16,17 +16,21 @@ export class ScannFormPage implements OnInit {
      userInfo:any = JSON.parse(sessionStorage.getItem('infoLogin'))
      is_user_logged_in = !!sessionStorage.getItem('infoLogin')
 
+     validate_form: FormGroup = new FormGroup({
+       p_matricule : new FormControl(null, Validators.required),
+       p_firstname : new FormControl(null, Validators.required),
+       p_lastname : new FormControl(null, Validators.required),
+       admin_id : new FormControl(null, Validators.required)
+     })
+
+
   ngOnInit() {
     console.log(this.userInfo);
     this.validate_form.get('p_firstname')?.setValue(this.userInfo?.firstname)
     this.validate_form.get('p_lastname')?.setValue(this.userInfo?.lastname)
+    this.validate_form.get('admin_id')?.setValue(this.userInfo?.admin_id)
   }
 
-  validate_form: FormGroup = new FormGroup({
-    p_matricule : new FormControl(null, Validators.required),
-    p_firstname : new FormControl(null, Validators.required),
-    p_lastname : new FormControl(null, Validators.required)
-  })
 
 
 
@@ -44,6 +48,9 @@ export class ScannFormPage implements OnInit {
       alert('Votre matricule est incorrecte ):')
 
     }
+
+    console.log(this.validate_form?.value);
+
 
   }
 
